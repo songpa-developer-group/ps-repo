@@ -10,10 +10,8 @@ class Solution:
                 count_by_char[c] += 1
             else:
                 count_by_char[c] = 1
-        count_char_list = [(v, k) for k, v in count_by_char.items()]
         odd_count = 0
-        count_char_list.sort(reverse=True)
-        for v, k in count_char_list:
+        for _, v in count_by_char.items():
             if v % 2 == 0:
                 answer += v
             elif odd_count == 0:
@@ -26,6 +24,6 @@ class Solution:
 
 print(
     Solution().longestPalindrome(
-        "civilwartestingwhetherthatnaptionoranynartionsoconceivedandsodedicatedcanlongendureWeareqmetonagreatbattlefiemldoftzhatwarWehavecometodedicpateaportionofthatfieldasafinalrestingplaceforthosewhoheregavetheirlivesthatthatnationmightliveItisaltogetherfangandproperthatweshoulddothisButinalargersensewecannotdedicatewecannotconsecratewecannothallowthisgroundThebravelmenlivinganddeadwhostruggledherehaveconsecrateditfaraboveourpoorponwertoaddordetractTgheworldadswfilllittlenotlenorlongrememberwhatwesayherebutitcanneverforgetwhattheydidhereItisforusthelivingrathertobededicatedheretotheulnfinishedworkwhichtheywhofoughtherehavethusfarsonoblyadvancedItisratherforustobeherededicatedtothegreattdafskremainingbeforeusthatfromthesehonoreddeadwetakeincreaseddevotiontothatcauseforwhichtheygavethelastpfullmeasureofdevotionthatweherehighlyresolvethatthesedeadshallnothavediedinvainthatthisnationunsderGodshallhaveanewbirthoffreedomandthatgovernmentofthepeoplebythepeopleforthepeopleshallnotperishfromtheearth"
+        "abccccdd"
     )
 )

@@ -11,4 +11,4 @@ class Solution:
         return '0' if largest_num[0] == '0' else largest_num
 
 
-Solution().largestNumber([3, 30, 34, 5, 9])
+print(Solution().largestNumber([3, 30, 34, 5, 9]))
