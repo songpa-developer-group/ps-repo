@@ -2,5 +2,5 @@ Breath-First-Search
 https://leetcode.com/problems/increasing-order-search-tree/
 https://leetcode.com/problems/diameter-of-binary-tree/
 https://leetcode.com/problems/path-sum-iii/
-https://leetcode.com/problems/number-of-islands/
-https://leetcode.com/problems/binary-tree-level-order-traversal/
+https://leetcode.com/problems/course-schedule-ii/
+https://leetcode.com/problems/validate-binary-search-tree/

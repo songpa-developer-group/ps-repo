@@ -56,7 +56,6 @@ if __name__ == "__main__":
         default="input.txt",
         help="please input your input file's name. default file name is input.txt",
     )
-
     parser.add_argument(
         "--problem_origin_url",
         "-u",
