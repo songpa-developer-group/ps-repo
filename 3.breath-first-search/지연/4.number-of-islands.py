@@ -8,10 +8,10 @@ class Solution:
         ROW_IDX = len(grid)
         COL_IDX = len(grid[0])
 
-        visited = [[False for _ in range(COL_IDX)]for _ in range(ROW_IDX)]
-
         DY = [0, 0, 1, -1]
         DX = [1, -1, 0, 0]
+
+        visited = [[False for _ in range(COL_IDX)]for _ in range(ROW_IDX)]
         land_nums = 0
 
         for row in range(ROW_IDX):
@@ -34,6 +34,7 @@ class Solution:
                             ):
                                 que.append((ny, nx))
                                 visited[ny][nx] = True
+
         return land_nums
 
 

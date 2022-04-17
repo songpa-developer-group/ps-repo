@@ -1,13 +1,11 @@
 from collections import deque
 
-# FIXME: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
 
 class Solution:
     def numSquares(self, n: int) -> int:
-        squared_list = [k * k for k in range(1, 101)]
-        is_visit = [False for _ in range(1, 10 ** 4)]
-        que = deque([(1, 1)])
+        squared_list = [k * k for k in range(101)]
+        is_visit = [False for _ in range(10 ** 4)]
+        que = deque([(0, 0)])
         while que:
             count, cur_num = que.popleft()
             if cur_num == n:
@@ -24,4 +22,4 @@ class Solution:
                         que.append((count + 1, next_num))
 
 
-print(Solution().numSquares(27))
+print(Solution().numSquares(12))
