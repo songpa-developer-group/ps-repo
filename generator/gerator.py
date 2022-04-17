@@ -5,7 +5,6 @@ import shutil
 CURRENT_PATH = os.path.dirname(__file__)
 TEMPLATE_PATH = "{}/template".format(CURRENT_PATH)
 PROBLEMLIST_PATH = "{}/problemlist".format(CURRENT_PATH)
-INPUT_FILE_NAME = "input.txt"
 
 
 def get_subject_and_urls_from_file(file_name):
@@ -51,24 +50,32 @@ if __name__ == "__main__":
         description="This is a helper for generating problem templates"
     )
     parser.add_argument(
+        "--input_file",
+        "-i",
+        type=str,
+        default="input.txt",
+        help="please input your input file's name. default file name is input.txt",
+    )
+
+    parser.add_argument(
         "--problem_origin_url",
-        "-url",
+        "-u",
         type=str,
         default="https://leetcode.com/problems/",
-        help="please input problem's origin url ",
+        help="please input problem's origin url. default origin url is https://leetcode.com/problems/",
     )
     parser.add_argument(
         "--file_type",
         "-t",
         type=str,
         default="py",
-        help="please input code type",
+        help="please input code's file type. default file type is py",
     )
 
     args = parser.parse_args()
     URL_FORMAT = args.problem_origin_url
     FILE_TYPE = args.file_type
-
+    INPUT_FILE_NAME = args.input_file
     subject, urls = get_subject_and_urls_from_file(INPUT_FILE_NAME)
     create_problem_list_from_subject_and_urls(subject, urls)
     create_template_from_urls(urls)
