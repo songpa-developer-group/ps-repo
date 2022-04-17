@@ -1,5 +1,7 @@
 from typing import List
 
+# 이진 탐색
+
 
 class Solution:
     def threeSum(self, nums: List[List[int]]) -> List[int]:
@@ -15,13 +17,12 @@ class Solution:
             while start_idx < end_idx:
                 cur_nums = nums[i] + nums[start_idx] + nums[end_idx]
                 if cur_nums == 0:
-                    if([nums[i], nums[start_idx], nums[end_idx]] in result):
-                        start_idx += 1
-                        end_idx -= 1
-                    else:
+                    if([nums[i], nums[start_idx], nums[end_idx]] not in result):
                         result.append(
                             [nums[i], nums[start_idx], nums[end_idx]]
                         )
+                    start_idx += 1
+                    end_idx -= 1
                 elif cur_nums < 0:
                     start_idx += 1
                 elif cur_nums > 0:

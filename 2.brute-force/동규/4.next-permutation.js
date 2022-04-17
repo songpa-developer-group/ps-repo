@@ -1,7 +1,7 @@
 function nextPermutation(nums) {
   const swap = (arr, a, b) => ([arr[a], arr[b]] = [arr[b], arr[a]]);
 
-  let i = nums.length - 2; //1
+  let i = nums.length - 2;
   while (i >= 0 && nums[i] >= nums[i + 1]) i--;
 
   if (i >= 0) {
@@ -11,5 +11,3 @@ function nextPermutation(nums) {
   }
   nums.push(...nums.splice(i + 1).reverse());
 }
-
-nextPermutation([1, 2, 3]);
