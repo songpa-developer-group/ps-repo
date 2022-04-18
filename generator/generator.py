@@ -32,9 +32,9 @@ def create_template_from_urls(urls):
     os.mkdir(TEMPLATE_PATH)
     for num, url in enumerate(urls):
         p_name = (
-            "{}.".format(num + 1)  # 문제번호
-            + _parse_name_from_url(url)  # 문제이름
-            + ".{}".format(FILE_TYPE)  # 파일타입
+            "{}.".format(num + 1)
+            + _parse_name_from_url(url)
+            + ".{}".format(FILE_TYPE)
         )
         p_file = open("{}/{}".format(TEMPLATE_PATH, p_name), "w+")
         p_file.write("## {}".format(url))
