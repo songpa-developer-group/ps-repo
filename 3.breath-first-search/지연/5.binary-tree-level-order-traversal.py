@@ -15,7 +15,7 @@ class Solution:
         order_by_depth = []
 
         if not root:
-            return []
+            return order_by_depth
 
         que = deque([root])
         while que:
@@ -27,6 +27,7 @@ class Solution:
             order_by_depth.append(
                 [node.val for node in current_depth_nodes]
             )
+
             for cur_node in current_depth_nodes:
                 if cur_node.left:
                     que.append(cur_node.left)
