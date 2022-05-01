@@ -1,5 +1,4 @@
-// https://leetcode.com/problems/validate-binary-search-tree/.
-
+// https://leetcode.com/problems/validate-binary-search-tree/
 function isValidBST(root) {
   let preVal = -Infinity;
   let stack = [];
