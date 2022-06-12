@@ -14,3 +14,6 @@ class Solution:
         for _ in range(k):
             kth_max = heapq.heappop(heap)[1]
         return kth_max
+
+
+print(Solution().findKthLargest([3, 2, 3, 1, 2, 4, 5, 5, 6], 4))
