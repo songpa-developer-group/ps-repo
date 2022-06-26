@@ -62,7 +62,7 @@ if __name__ == "__main__":
         "--problem_origin_url",
         "-u",
         type=str,
-        default="https://leetcode.com/problems/",
+        default="https://programmers.co.kr/learn/courses/30/lessons/",
         help="please input problem's origin url. default origin url is https://leetcode.com/problems/",
     )
     parser.add_argument(
