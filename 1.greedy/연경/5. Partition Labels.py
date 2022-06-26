@@ -1,3 +1,4 @@
+## 5. [partion-labels](https://leetcode.com/problems/partition-labels/)
 def partitionLabels(s):
 
     location = [-1 for _ in range(26)]
