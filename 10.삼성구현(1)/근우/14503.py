@@ -76,9 +76,3 @@ _map = [list(map(int, input().split()))for _ in range(N)]
 robot = Robot(R, C, D, _map, N, M)
 robot.operate()
 print(robot.clean_count)
-
-
-
-
-
-
