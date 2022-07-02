@@ -1,4 +1,4 @@
-# https://www.acmicpc.net/problem/14500
+# https://www.acmicpc.neœœt/problem/14500
 
 import sys; input = sys.stdin.readline
 
@@ -8,7 +8,7 @@ def dfs(board, total):
         ans = max(ans, total)
         return
     for block in board:
-        for dy,dx in zip([1,0],[0,1]):
+        for dy,dx in zip([1,0,-1,0],[0,1,0,-1]):
             nblock = [block[0] + dy, block[1] + dx]
             if 0 <= nblock[0] < N and 0 <= nblock[1] < M and visit[nblock[0]][nblock[1]] == 0:
                 visit[nblock[0]][nblock[1]] = 1
@@ -74,8 +74,7 @@ for tetromino in tetrominos:
             for i in range(4):
                 next_tetromino[i]=(tetromino[i][0]+y,tetromino[i][1]+x)
             if all([0 <= bar[0] < N and 0 <= bar[1] < M for bar in next_tetromino]):
-                answer = max(answer, sum(
-                    [board[bar[0]][bar[1]] for bar in next_tetromino]))
+                answer = max(answer, sum([board[bar[0]][bar[1]] for bar in next_tetromino]))
             else:
                 break
 print(answer)
