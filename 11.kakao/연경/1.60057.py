@@ -3,10 +3,11 @@ def solution(s):
 
     answer = len(s)
     size = len(s)
-    last = None
+
     for i in range(1, size):
         tmp = []
         j = 0
+        last = None
         while j < size:
 
             if last is None:
@@ -27,7 +28,6 @@ def solution(s):
             if c != 1:
                 length += len(str(c))
         answer = min(length, answer)
-        last = None
     return answer
 
 if __name__ == "__main__":
