@@ -14,9 +14,8 @@ b,a,c,d
 c,d,e,a
 2^4 마지막에는 score가 rangesearch할 수 , 1 이상 100,000 이하인 자연수입니다. binary정렬되게 저장
 """
-from bisect import bisect, bisect_left
+from bisect import bisect_left
 from collections import defaultdict
-from email.policy import default
 
 
 def solution(infos, querys):
