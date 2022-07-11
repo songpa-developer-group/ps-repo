@@ -62,8 +62,8 @@ if __name__ == "__main__":
         "--problem_origin_url",
         "-u",
         type=str,
-        default="https://programmers.co.kr/learn/courses/30/lessons/",
-        help="please input problem's origin url. default origin url is https://leetcode.com/problems/",
+        default="https://school.programmers.co.kr/learn/courses/30/lessons/",
+        help="please input problem's origin url. default origin url is https://school.programmers.co.kr/learn/courses/30/lessons/",
     )
     parser.add_argument(
         "--file_type",
