@@ -1,3 +1,5 @@
+// https://programmers.co.kr/learn/courses/30/lessons/60058
+
 function solution(w) {
   if (w === "") return ""; // w가 빈 문자열이면 빈 문자열을 반환한다.
   let u, v;
